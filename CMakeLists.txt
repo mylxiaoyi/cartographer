@@ -52,15 +52,15 @@ if(SPHINX_FOUND)
   add_subdirectory("docs")
 endif()
 
-set(GMOCK_SRC_DIR "/usr/src/gmock" CACHE STRING "Path to google-mock sources.")
+#set(GMOCK_SRC_DIR "/usr/src/gmock" CACHE STRING "Path to google-mock sources.")
 
-add_subdirectory(${GMOCK_SRC_DIR} "${CMAKE_CURRENT_BINARY_DIR}/gmock")
+#add_subdirectory(${GMOCK_SRC_DIR} "${CMAKE_CURRENT_BINARY_DIR}/gmock")
 
-google_add_flag(GOOG_CXX_FLAGS "-std=c++11")
+#google_add_flag(GOOG_CXX_FLAGS "-std=c++11")
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   google_add_flag(GOOG_CXX_FLAGS "-Weverything")
-  google_add_flag(GOOG_CXX_FLAGS "-Werror=deprecated")
+  #google_add_flag(GOOG_CXX_FLAGS "-Werror=deprecated")
   google_add_flag(GOOG_CXX_FLAGS "-Werror=non-pod-varargs")
 else()
   google_add_flag(GOOG_CXX_FLAGS "-Wall")
